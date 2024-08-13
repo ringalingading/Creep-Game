@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://duf5qe8xan04i"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_oihlp"]
-[ext_resource type="PackedScene" uid="uid://ct50gemh36i2h" path="res://Mob.tscn" id="2_1ibbe"]
 [ext_resource type="PackedScene" uid="uid://ieb3g76fargb" path="res://Player.tscn" id="2_odm2r"]
+[ext_resource type="PackedScene" uid="uid://ct50gemh36i2h" path="res://Mob.tscn" id="2_s6cyl"]
 [ext_resource type="PackedScene" uid="uid://cxagi5acbvhrk" path="res://HUD.tscn" id="4_1l40t"]
 
 [sub_resource type="Curve2D" id="Curve2D_iqk24"]
@@ -13,7 +13,7 @@ point_count = 5
 
 [node name="Main" type="Node"]
 script = ExtResource("1_oihlp")
-Mob = ExtResource("2_1ibbe")
+mob_scene = ExtResource("2_s6cyl")
 
 [node name="Player" parent="." instance=ExtResource("2_odm2r")]
 position = Vector2(-53, -56)
