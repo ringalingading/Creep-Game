@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ct50gemh36i2h"]
+[gd_scene load_steps=10 format=3 uid="uid://ct50gemh36i2h"]
 
 [ext_resource type="Script" path="res://mob.gd" id="1_6gbtl"]
 [ext_resource type="Texture2D" uid="uid://pgor2xwlru3s" path="res://art/enemyFlyingAlt_1.png" id="1_7p4jt"]
@@ -44,6 +44,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tkgqb"]
+radius = 47.0
+height = 94.0
+
 [node name="Mob" type="RigidBody2D"]
 script = ExtResource("1_6gbtl")
 metadata/_edit_group_ = true
@@ -51,11 +55,10 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_nuhht")
-animation = &"walk"
-frame = 1
-frame_progress = 0.568394
+animation = &"fly"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_tkgqb")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
