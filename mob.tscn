@@ -1,21 +1,21 @@
 [gd_scene load_steps=10 format=3 uid="uid://ct50gemh36i2h"]
 
-[ext_resource type="Script" path="res://mob.gd" id="1_6gbtl"]
-[ext_resource type="Texture2D" uid="uid://pgor2xwlru3s" path="res://art/enemyFlyingAlt_1.png" id="1_7p4jt"]
-[ext_resource type="Texture2D" uid="uid://dnprb2i187xg5" path="res://art/enemyFlyingAlt_2.png" id="2_wu5bp"]
-[ext_resource type="Texture2D" uid="uid://cg3u1w6551etx" path="res://art/enemySwimming_1.png" id="3_13ksd"]
-[ext_resource type="Texture2D" uid="uid://baroygbc72mq4" path="res://art/enemySwimming_2.png" id="4_pcbef"]
-[ext_resource type="Texture2D" uid="uid://bo0ngu0ycmom0" path="res://art/enemyWalking_1.png" id="5_k5wuj"]
-[ext_resource type="Texture2D" uid="uid://do112i6pvacmm" path="res://art/enemyWalking_2.png" id="6_vltv8"]
+[ext_resource type="Script" path="res://Mob.gd" id="1_dtpro"]
+[ext_resource type="Texture2D" uid="uid://pgor2xwlru3s" path="res://art/enemyFlyingAlt_1.png" id="2_pxqtn"]
+[ext_resource type="Texture2D" uid="uid://dnprb2i187xg5" path="res://art/enemyFlyingAlt_2.png" id="3_vdcg8"]
+[ext_resource type="Texture2D" uid="uid://cg3u1w6551etx" path="res://art/enemySwimming_1.png" id="4_xhtfn"]
+[ext_resource type="Texture2D" uid="uid://baroygbc72mq4" path="res://art/enemySwimming_2.png" id="5_v036s"]
+[ext_resource type="Texture2D" uid="uid://bo0ngu0ycmom0" path="res://art/enemyWalking_1.png" id="6_eu13l"]
+[ext_resource type="Texture2D" uid="uid://do112i6pvacmm" path="res://art/enemyWalking_2.png" id="7_e2iru"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nuhht"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_7p4jt")
+"texture": ExtResource("2_pxqtn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_wu5bp")
+"texture": ExtResource("3_vdcg8")
 }],
 "loop": true,
 "name": &"fly",
@@ -23,10 +23,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_13ksd")
+"texture": ExtResource("4_xhtfn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_pcbef")
+"texture": ExtResource("5_v036s")
 }],
 "loop": true,
 "name": &"swim",
@@ -34,10 +34,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_k5wuj")
+"texture": ExtResource("6_eu13l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_vltv8")
+"texture": ExtResource("7_e2iru")
 }],
 "loop": true,
 "name": &"walk",
@@ -49,7 +49,7 @@ radius = 47.0
 height = 94.0
 
 [node name="Mob" type="RigidBody2D"]
-script = ExtResource("1_6gbtl")
+script = ExtResource("1_dtpro")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
