@@ -8,7 +8,6 @@ func _ready():
 	new_game()
 
 func new_game():
-	print("hi")
 	score = 0
 	get_tree().call_group("mobs", "queue_free")
 	$Player.start($StartPosition.position)
@@ -17,13 +16,15 @@ func new_game():
 	$HUD.show_message("Get Ready")
 	
 func game_over():
-	print("HI2")
 	$ScoreTimer.stop()
 	$MobTimer.stop()
+	$HUD.show_message("Game Over!")
 	$HUD/MessageLabel.visible = true
-	$HUD/ScoreLabel.visible = true
+	$GameOverTimer.start()
+	await $GameOverTimer.timeout
+	$HUD.show_message("Dodge the Creeps!")
 	$HUD/StartButton.visible = true
-
+	
 func _on_start_timer_timeout():
 	$MobTimer.start()
 	$ScoreTimer.start()
@@ -31,7 +32,6 @@ func _on_start_timer_timeout():
 
 func _on_score_timer_timeout():
 	score += 1
-	print("Score!")
 	$HUD.update_score(score)
 
 
@@ -60,9 +60,12 @@ func _on_mob_timer_timeout():
 	add_child(mob)
 
 func _on_player_hit():
-	print("HI")
 	game_over()
 
 
 func _on_hud_start_game():
 	new_game()
+
+
+func _on_game_over_timer_timeout():
+	pass # Replace with function body.
