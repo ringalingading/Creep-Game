@@ -17,16 +17,21 @@ func new_game():
 	$HUD.show_message("Get Ready")
 	
 func game_over():
+	print("HI2")
 	$ScoreTimer.stop()
 	$MobTimer.stop()
+	$HUD/MessageLabel.visible = true
+	$HUD/ScoreLabel.visible = true
+	$HUD/StartButton.visible = true
 
 func _on_start_timer_timeout():
 	$MobTimer.start()
 	$ScoreTimer.start()
-	$HUD.show_game_over()
+	$HUD/MessageLabel.hide()
 
 func _on_score_timer_timeout():
 	score += 1
+	print("Score!")
 	$HUD.update_score(score)
 
 
