@@ -33,7 +33,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_us4aa"]
-radius = 27.0
+radius = 28.0
 height = 68.0
 
 [node name="Player" type="Area2D"]
@@ -41,7 +41,8 @@ script = ExtResource("1_2bk5w")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+position = Vector2(0.5, 0)
+scale = Vector2(0.509259, 0.5)
 sprite_frames = SubResource("SpriteFrames_lmv5t")
 animation = &"walk"
 
@@ -60,7 +61,6 @@ wait_time = 0.1
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="hit" from="." to="Health" method="_on_player_hit"]
 [connection signal="reset_health" from="." to="Health" method="_on_player_reset_health"]
-[connection signal="died" from="Health" to="." method="_on_health_died"]
 [connection signal="took_dmg" from="Health" to="." method="_on_health_took_dmg"]
 [connection signal="timeout" from="Health/ImmunityTimer" to="Health" method="_on_immunity_timer_timeout"]
 [connection signal="timeout" from="BlinkTimer" to="." method="_on_blink_timer_timeout"]

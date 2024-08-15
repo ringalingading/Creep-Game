@@ -2,22 +2,26 @@ extends Node
 
 @export var mob_scene: PackedScene
 var score
-signal reset_health
-
+signal game_start
+signal game_over
+var health = 3
 func _ready():
+	$HUD.start_pressed.connect(new_game)
+	$Player.player_died.connect(reset_game)
 	randomize()
 	new_game()
 
 func new_game():
+	emit_signal("game_start")
 	score = 0
 	get_tree().call_group("mobs", "queue_free")
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
 	$HUD.update_score(score)
 	$HUD.show_message("Get Ready")
-	emit_signal("reset_health")
 	
-func game_over():
+func reset_game():
+	emit_signal("game_over")
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$HUD.show_message("Game Over!")
@@ -61,13 +65,14 @@ func _on_mob_timer_timeout():
 	# Spawn the mob by adding it to the Main scene.
 	add_child(mob)
 
-func _on_hud_start_game():
-	new_game()
-
 
 func _on_game_over_timer_timeout():
 	pass # Replace with function body.
 
 
-func _on_player_game_over():
-	game_over()
+
+
+
+
+
+

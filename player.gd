@@ -1,5 +1,5 @@
 extends Area2D
-signal game_over
+signal player_died
 signal hit
 signal reset_health
 @export var speed = 400 # How fast the player will move (pixels/sec).
@@ -7,7 +7,9 @@ var screen_size # Size of the game window.
 var immune_timer = false
 func _ready():
 	
-	immune_timer = $Health/ImmunityTimer.timeout.connect(_on_ImmunityTimer_timeout)
+	$Health/ImmunityTimer.timeout.connect(_on_ImmunityTimer_timeout)
+	$Health.health_died.connect(_on_health_died)
+	get_parent().game_start.connect(_reset_health)
 	screen_size = get_viewport_rect().size
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
@@ -44,6 +46,7 @@ func start(pos):
 	show()
 	$CollisionShape2D.disabled = false
 
+
 func _on_body_entered(body):
 	#hide() # Player disappears after being hit.
 	hit.emit()
@@ -55,15 +58,16 @@ func _on_health_died():
 	print("died")
 	hide()
 	$CollisionShape2D.set_deferred("disabled", true)
-	emit_signal("game_over")
+	emit_signal("player_died")
 	
-func _on_main_reset_health():
+func _reset_health():
+	print("HIhi")
 	emit_signal("reset_health")
 
 func _on_health_took_dmg():
-	print("hi")
+	
 	while ( !immune_timer):
-		print("HI")
+		
 		hide()
 		await get_tree().create_timer(0.1).timeout
 		show()

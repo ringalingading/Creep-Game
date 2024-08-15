@@ -41,8 +41,10 @@ curve = SubResource("Curve2D_iqk24")
 
 [node name="HUD" parent="." instance=ExtResource("4_1l40t")]
 
+[connection signal="reset_health" from="." to="Player" method="_on_main_reset_health"]
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
 [connection signal="timeout" from="GameOverTimer" to="." method="_on_game_over_timer_timeout"]
+[connection signal="start_game" from="HUD" to="." method="_on_hud_start_game"]
