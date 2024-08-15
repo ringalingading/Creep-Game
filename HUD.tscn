@@ -83,4 +83,8 @@ metadata/_edit_lock_ = true
 
 [node name="MessageTimer" type="Timer" parent="."]
 
+[node name="HealthLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

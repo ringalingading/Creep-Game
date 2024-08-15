@@ -10,11 +10,13 @@ func _ready():
 
 func _on_player_hit():
 	if (!immune):
-		emit_signal("took_dmg")
+		
 		health -= 1
 		print(health)
 		if health == 0 :
 			emit_signal("died")
+		else:
+			emit_signal("took_dmg")
 		immune = true
 		$ImmunityTimer.start()
 		await $ImmunityTimer.timeout
