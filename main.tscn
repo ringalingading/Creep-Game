@@ -29,6 +29,7 @@ one_shot = true
 
 [node name="GameOverTimer" type="Timer" parent="."]
 wait_time = 1.5
+one_shot = true
 
 [node name="StartPosition" type="Node2D" parent="."]
 position = Vector2(240, 450)
@@ -40,6 +41,8 @@ curve = SubResource("Curve2D_iqk24")
 
 [node name="HUD" parent="." instance=ExtResource("4_1l40t")]
 
+[connection signal="reset_health" from="." to="Player" method="_on_main_reset_health"]
+[connection signal="game_over" from="Player" to="." method="_on_player_game_over"]
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]

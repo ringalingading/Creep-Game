@@ -2,6 +2,7 @@ extends Node
 
 @export var mob_scene: PackedScene
 var score
+signal reset_health
 
 func _ready():
 	randomize()
@@ -14,6 +15,7 @@ func new_game():
 	$StartTimer.start()
 	$HUD.update_score(score)
 	$HUD.show_message("Get Ready")
+	emit_signal("reset_health")
 	
 func game_over():
 	$ScoreTimer.stop()
@@ -59,13 +61,13 @@ func _on_mob_timer_timeout():
 	# Spawn the mob by adding it to the Main scene.
 	add_child(mob)
 
-func _on_player_hit():
-	game_over()
-
-
 func _on_hud_start_game():
 	new_game()
 
 
 func _on_game_over_timer_timeout():
 	pass # Replace with function body.
+
+
+func _on_player_game_over():
+	game_over()

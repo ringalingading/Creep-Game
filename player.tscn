@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://ieb3g76fargb"]
+[gd_scene load_steps=9 format=3 uid="uid://ieb3g76fargb"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_2bk5w"]
 [ext_resource type="Texture2D" uid="uid://d32erywpmpf4f" path="res://art/playerGrey_up1.png" id="1_kqj3t"]
 [ext_resource type="Texture2D" uid="uid://cyheetyuvpshh" path="res://art/playerGrey_up2.png" id="2_vevyg"]
 [ext_resource type="Texture2D" uid="uid://dvx5vxifx7f5s" path="res://art/playerGrey_walk1.png" id="3_l5js2"]
 [ext_resource type="Texture2D" uid="uid://bjocv423er7d5" path="res://art/playerGrey_walk2.png" id="4_j84qu"]
+[ext_resource type="Script" path="res://Health.gd" id="6_7j2wy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lmv5t"]
 animations = [{
@@ -47,4 +48,19 @@ animation = &"walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_us4aa")
 
+[node name="Health" type="Node2D" parent="."]
+script = ExtResource("6_7j2wy")
+
+[node name="ImmunityTimer" type="Timer" parent="Health"]
+one_shot = true
+
+[node name="BlinkTimer" type="Timer" parent="."]
+wait_time = 0.1
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="hit" from="." to="Health" method="_on_player_hit"]
+[connection signal="reset_health" from="." to="Health" method="_on_player_reset_health"]
+[connection signal="died" from="Health" to="." method="_on_health_died"]
+[connection signal="took_dmg" from="Health" to="." method="_on_health_took_dmg"]
+[connection signal="timeout" from="Health/ImmunityTimer" to="Health" method="_on_immunity_timer_timeout"]
+[connection signal="timeout" from="BlinkTimer" to="." method="_on_blink_timer_timeout"]
