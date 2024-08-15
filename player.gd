@@ -51,6 +51,7 @@ func _on_body_entered(body):
 	# $CollisionShape2D.set_deferred("disabled", true)
 
 func _on_health_died():
+	immune_timer = false
 	print("died")
 	hide()
 	$CollisionShape2D.set_deferred("disabled", true)

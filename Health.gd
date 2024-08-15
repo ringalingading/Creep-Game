@@ -17,10 +17,11 @@ func _on_player_hit():
 			emit_signal("died")
 		else:
 			emit_signal("took_dmg")
-		immune = true
-		$ImmunityTimer.start()
-		await $ImmunityTimer.timeout
-		immune = false
+			immune = true
+			$ImmunityTimer.start()
+			await $ImmunityTimer.timeout
+			immune = false
+		
 	
 	
 

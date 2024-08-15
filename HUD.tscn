@@ -87,4 +87,7 @@ metadata/_edit_lock_ = true
 offset_right = 40.0
 offset_bottom = 23.0
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(56, 88)
+
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
