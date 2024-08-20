@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://ieb3g76fargb"]
+[gd_scene load_steps=9 format=3 uid="uid://ieb3g76fargb"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_2bk5w"]
 [ext_resource type="Texture2D" uid="uid://d32erywpmpf4f" path="res://art/playerGrey_up1.png" id="1_kqj3t"]
-[ext_resource type="PackedScene" uid="uid://daxq5lc0bblmu" path="res://Fireball.tscn" id="2_gfnxx"]
 [ext_resource type="Texture2D" uid="uid://cyheetyuvpshh" path="res://art/playerGrey_up2.png" id="2_vevyg"]
 [ext_resource type="Texture2D" uid="uid://dvx5vxifx7f5s" path="res://art/playerGrey_walk1.png" id="3_l5js2"]
 [ext_resource type="Texture2D" uid="uid://bjocv423er7d5" path="res://art/playerGrey_walk2.png" id="4_j84qu"]
@@ -39,7 +38,6 @@ height = 68.0
 
 [node name="Player" type="Area2D"]
 script = ExtResource("1_2bk5w")
-fireball_scene = ExtResource("2_gfnxx")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -59,9 +57,6 @@ one_shot = true
 
 [node name="BlinkTimer" type="Timer" parent="."]
 wait_time = 0.1
-
-[node name="AttackTimer" type="Timer" parent="."]
-one_shot = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="hit" from="." to="Health" method="_on_player_hit"]

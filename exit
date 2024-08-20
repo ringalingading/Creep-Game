@@ -1,0 +1,117 @@
+[33mcommit 26e08525e3a9a6928e6ffd231794d19940ffad1d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Tue Aug 20 12:51:58 2024 -0400
+
+    reset try2
+
+[33mcommit 284ab1676786fc3c5f20e4102b976cb2c9a6c7b9[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Thu Aug 15 17:48:24 2024 -0400
+
+    Cleaned up Spaghetti
+
+[33mcommit 51ad0abbc5d729616b8d70e3009065e4671b562b[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Thu Aug 15 13:33:17 2024 -0400
+
+    update on visual bug
+
+[33mcommit 9c09f3438895429d226f1b048e224b610ac70ed6[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Thu Aug 15 13:20:31 2024 -0400
+
+    update on showing death
+
+[33mcommit 5cba78f588e0f3a6339bcf5537fdd88a48b216e8[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Wed Aug 14 20:23:02 2024 -0400
+
+    Updated Immunity and Health
+
+[33mcommit 8b8af9d44f468032e9dc0ff0b75f3c96df2d2666[m[33m ([m[1;32mAdding-Health[m[33m)[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Tue Aug 13 18:29:46 2024 -0400
+
+    update on physics
+
+[33mcommit 1fbb96a90e2e6346d3eb4e798fbeaa8924fe77e3[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Tue Aug 13 17:27:10 2024 -0400
+
+    IT WORKS!
+    
+    pretty much functional, just needs some physics updates
+
+[33mcommit ac8cce2094c5a72708edc94e78c10848ef150d85[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Tue Aug 13 16:27:56 2024 -0400
+
+    Raining Fish Variant
+
+[33mcommit 693098fc9b59364658c221f67ab1e295e1a8de60[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Tue Aug 13 16:00:09 2024 -0400
+
+    Quasi-Complete Game
+    
+    Currently crashes because player doesnt have a start function
+
+[33mcommit dc3bf84a433dc717c25ffe5892cd724d7a5efdec[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Tue Aug 13 13:15:19 2024 -0400
+
+    Updated Main with Spawn Path
+
+[33mcommit 595dff528f7293aad65a5301471249d0e1208e82[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Mon Aug 12 20:18:28 2024 -0400
+
+    Delete ~libgit_plugin.windows.editor.x86_64.dll
+
+[33mcommit 4e825d619a9558397bb6ba19877e3dd3a4e97ad9[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Mon Aug 12 20:18:19 2024 -0400
+
+    Added Main Scene File
+
+[33mcommit 70bb4124e4cf82999f90cfa73d0944f6c2ef5b13[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Mon Aug 12 19:54:24 2024 -0400
+
+    Update on Mob
+
+[33mcommit 11ac591bf946bf2afceb9b32b89df08343f39aae[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Mon Aug 12 17:13:17 2024 -0400
+
+    Finished Player/Began Mob
+
+[33mcommit 82d03b5820e303bb9c4f871f5f88f3b94ba870d2[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Mon Aug 12 15:41:42 2024 -0400
+
+    Create player.tscn
+
+[33mcommit 00ebd6bff81ef93b57b7532fe7726cb8c7bae77c[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Mon Aug 12 15:22:19 2024 -0400
+
+    Reset for Project
+
+[33mcommit 6af082be1c3bde7d54613b70b3dfc62b9c630308[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Mon Aug 12 14:48:42 2024 -0400
+
+    added a icon
+
+[33mcommit 5d02dee748f2f89e2a901ce8e025775cc8c1b7da[m
+Author: ringalingading <159478266+ringalingading@users.noreply.github.com>
+Date:   Mon Aug 12 14:43:17 2024 -0400
+
+    Initial Commit
+
+[33mcommit 9d5a04d74a715d0a6d7533f90bb941bd21af88ed[m
+Author: ringalingading <jimstilz@gmail.com>
+Date:   Mon Aug 12 14:21:59 2024 -0400
+
+    first commit

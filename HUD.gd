@@ -29,4 +29,4 @@ func _on_start_button_pressed():
 func _on_hit():
 	await get_tree().create_timer(0.1).timeout
 	currHealth = get_parent().get_node("Player/Health").return_health()
-	$HealthLabel.text = str(currHealth)
+	$HealthLabel.text = str(currHealth) 
